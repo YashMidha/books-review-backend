@@ -11,7 +11,7 @@ import authRouter from "./src/routes/authRouter.js";
 const app = express();
 
 const corsOptions = {
-  origin: ["http://localhost:5173"],
+  origin: [process.env.FRONTEND_URI],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization"],
