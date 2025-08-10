@@ -71,7 +71,7 @@ export const recommendForUser = async (req, res) => {
     try {
         const userId = req.user._id;
         const page = parseInt(req.query.page) || 1;
-        const limit = 3;
+        const limit = 4;
         const skip = (page - 1) * limit;
 
         const user = await userModel.findById(userId)
